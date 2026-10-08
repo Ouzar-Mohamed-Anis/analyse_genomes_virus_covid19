@@ -19,6 +19,7 @@ aligné les deux séquences avec MAFFT et identifié les mutations.
 ## Outils utilisés
 
 - Python + BioPython
+- BLAST
 - MAFFT
 - Matplotlib
 
@@ -30,6 +31,7 @@ aligné les deux séquences avec MAFFT et identifié les mutations.
 python3 scripts/genome_stats.py
 python3 scripts/graphiques.py
 python3 scripts/spike.py
+cat data/spike/wuhan_spike.fasta data/spike/omicron_spike.fasta > data/spike/les_deux_spike.fasta
 mafft --auto data/spike/les_deux_spike.fasta > data/spike/spike_aligne.fasta
 python3 scripts/mutations.py
 ```
@@ -45,5 +47,6 @@ python3 scripts/mutations.py
 
 Mutations dans le gène Spike :
 - Substitutions : 31
-- Délétions : 46
-- Insertions : 46
+- Délétions : 18
+- Insertions : 9
+- Total : 58
