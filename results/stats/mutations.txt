@@ -1,0 +1,37 @@
+mutations spike wuhan vs omicron
+
+substitutions : 31
+deletions : 46
+insertions : 46
+
+200 | C | T
+284 | C | T
+1025 | G | A
+1120 | T | C
+1121 | C | T
+1126 | T | C
+1133 | C | T
+1260 | G | T
+1329 | T | G
+1345 | G | A
+1439 | G | A
+1442 | C | A
+1460 | A | C
+1487 | A | G
+1495 | G | A
+1502 | A | G
+1510 | A | T
+1522 | T | C
+1649 | C | A
+1850 | A | G
+1972 | C | T
+2046 | T | G
+2051 | C | A
+2301 | C | A
+2395 | G | T
+2503 | G | N
+2577 | C | A
+2871 | A | T
+2916 | T | A
+2950 | C | T
+3447 | C | T
