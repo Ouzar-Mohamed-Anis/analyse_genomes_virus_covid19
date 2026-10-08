@@ -8,17 +8,25 @@ wuhan_seq = str(wuhan.seq).upper()
 omicron_seq = str(omicron.seq).upper()
 
 # extraire le gene Spike
-# coordonnees officielles dans NC_045512.2
-spike_start = 21562
-spike_end = 25384
+# coordonnees Wuhan : officielles NC_045512.2
+wuhan_start = 21562
+wuhan_end = 25384
 
-wuhan_spike = wuhan_seq[spike_start:spike_end]
-omicron_spike = omicron_seq[spike_start:spike_end]
+# coordonnees Omicron : trouvees avec BLAST
+omicron_start = 21534
+omicron_end = 25347
+
+wuhan_spike = wuhan_seq[wuhan_start:wuhan_end]
+omicron_spike = omicron_seq[omicron_start:omicron_end]
 
 print("spike wuhan : " + str(len(wuhan_spike)) + " bp")
 print("spike omicron : " + str(len(omicron_spike)) + " bp")
 
-# sauvegarder les deux sequences spike dans des fichiers fasta
+# verifier que les deux commencent par ATG
+print("debut wuhan spike : " + wuhan_spike[:6])
+print("debut omicron spike : " + omicron_spike[:6])
+
+# sauvegarder
 with open("data/spike/wuhan_spike.fasta", "w") as f:
     f.write(">Wuhan_Spike\n")
     f.write(wuhan_spike + "\n")

@@ -1,8 +1,8 @@
 mutations spike wuhan vs omicron
 
 substitutions : 31
-deletions : 46
-insertions : 46
+deletions : 18
+insertions : 9
 
 200 | C | T
 284 | C | T

@@ -38,8 +38,10 @@ J'ai écrit un script Python pour calculer la longueur,
 la composition en bases (A, T, G, C) et le GC% de chaque génome.
 
 ### Etape 2 : extraction du gène Spike
-J'ai extrait le gène Spike des deux génomes en utilisant
-ses coordonnées dans le génome de référence (positions 21562-25384).
+J'ai d'abord extrait le Spike de Wuhan avec les coordonnées
+officielles (21562-25384). Pour Omicron, j'ai utilisé BLAST
+pour trouver les coordonnées exactes dans son génome (21534-25347),
+car les deux génomes ont des tailles différentes.
 
 ### Etape 3 : alignement
 J'ai aligné les deux séquences Spike avec MAFFT depuis
@@ -68,9 +70,9 @@ Le GC% est identique dans les deux variants.
 | Type | Nombre |
 |------|--------|
 | Substitutions | 31 |
-| Délétions | 46 |
-| Insertions | 46 |
-| Total | 123 |
+| Délétions | 18 |
+| Insertions | 9 |
+| Total | 58 |
 
 ---
 
@@ -92,6 +94,6 @@ J'ai utilisé Python avec BioPython pour manipuler des séquences
 biologiques, MAFFT pour aligner deux séquences, et Matplotlib
 pour visualiser les résultats.
 
-Les résultats montrent que le variant Omicron BA.1 a 123 mutations
+Les résultats montrent que le variant Omicron BA.1 a 58 mutations
 dans le gène Spike par rapport à la souche Wuhan originale, ce qui
 explique pourquoi ce variant est si différent immunologiquement.

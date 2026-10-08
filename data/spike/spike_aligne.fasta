@@ -62,10 +62,9 @@ aacattcaaaaagaaattgaccgcctcaatgaggttgccaagaatttaaatgaatctctc
 atcgatctccaagaacttggaaagtatgagcagtatataaaatggccatggtacatttgg
 ctaggttttatagctggcttgattgccatagtaatggtgacaattatgctttgctgtatg
 accagttgctgtagttgtctcaagggctgttgttcttgtggatcctgctgcaaatttgat
-gaagacgactctgagccagtgctcaaaggagtcaaattacattacacataa---------
-----------------------------
+gaagacgactctgagccagtgctcaaaggagtcaaattacattacacataa
 >Omicron_Spike
-----------------------------tagtctctagtcagtgtgttaatcttacaacc
+atgtttgtttttcttgttttattgccactagtctctagtcagtgtgttaatcttacaacc
 agaactcaattaccccctgcatacactaattctttcacacgtggtgtttattaccctgac
 aaagttttcagatcctcagttttacattcaactcaggacttgttcttacctttcttttcc
 aatgttacttggttccatgtta------tctctgggaccaatggtactaagaggtttgat
@@ -128,5 +127,4 @@ aacattcaaaaagaaattgaccgcctcaatgaggttgccaagaatttaaatgaatctctc
 atcgatctccaagaacttggaaagtatgagcagtatataaaatggccatggtacatttgg
 ctaggttttatagctggcttgattgccatagtaatggtgacaattatgctttgctgtatg
 accagttgctgtagttgtctcaagggctgttgttcttgtggatcctgctgcaaatttgat
-gaagacgactctgagccagtgctcaaaggagtcaaattacattacacataaacgaactta
-tggatttgtttatgagaatcttcacaat
+gaagacgactctgagccagtgctcaaaggagtcaaattacattacacataa
