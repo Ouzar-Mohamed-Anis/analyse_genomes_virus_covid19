@@ -1,11 +1,12 @@
 from Bio import SeqIO
 import matplotlib.pyplot as plt
 
-# charger l alignement
-sequences = list(SeqIO.parse("data/spike/spike_aligne.fasta", "fasta"))
-
-wuhan = str(sequences[0].seq).upper()
-omicron = str(sequences[1].seq).upper()
+# charger les deux sequences de l alignement
+for record in SeqIO.parse("data/spike/spike_aligne.fasta", "fasta"):
+    if record.id == "Wuhan_Spike":
+        wuhan = record.seq.upper()
+    if record.id == "Omicron_Spike":
+        omicron = record.seq.upper()
 
 print("alignement charge")
 
@@ -32,15 +33,15 @@ for i in range(len(wuhan)):
     position = i + 1
     substitutions.append([position, w, o])
 
-print("substitutions : " + str(len(substitutions)))
-print("deletions : " + str(nb_deletions))
-print("insertions : " + str(nb_insertions))
+print("substitutions :", len(substitutions))
+print("deletions :", nb_deletions)
+print("insertions :", nb_insertions)
 
 # afficher les substitutions
 print("")
 print("position | wuhan | omicron")
 for s in substitutions:
-    print(str(s[0]) + " | " + s[1] + " | " + s[2])
+    print(s[0], "|", s[1], "|", s[2])
 
 # sauvegarder dans un fichier
 f = open("results/stats/mutations.txt", "w")
@@ -53,7 +54,6 @@ for s in substitutions:
     f.write(ligne)
 f.close()
 
-print("")
 print("mutations sauvegardees dans results/stats/mutations.txt")
 
 # graphique
