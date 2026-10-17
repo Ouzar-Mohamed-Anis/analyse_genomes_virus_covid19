@@ -90,7 +90,24 @@ et non nécessairement à des événements mutationnels distincts.
 
 ---
 
-## 6. Conclusion
+## 6. Reproductibilité
+
+Les commandes suivantes permettent de relancer l'analyse complète :
+
+```bash
+python3 scripts/genome_stats.py
+python3 scripts/graphiques.py
+python3 scripts/spike.py
+cat data/spike/wuhan_spike.fasta data/spike/omicron_spike.fasta > data/spike/les_deux_spike.fasta
+mafft --auto data/spike/les_deux_spike.fasta > data/spike/spike_aligne.fasta
+python3 scripts/mutations.py
+```
+
+
+---
+
+
+## 7. Conclusion
 
 Ce projet m'a permis de mettre en pratique les connaissances
 acquises pendant mes sept semaines de formation en bioinformatique.
@@ -106,3 +123,5 @@ substitutions, délétions et insertions. Ce travail m'a permis
 de découvrir les principales étapes d'une analyse comparative
 de séquences virales et de développer mes compétences pratiques
 en bioinformatique.
+
+
