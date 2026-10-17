@@ -22,10 +22,10 @@ bioinformatiques.
 
 ## 2. Données utilisées
 
-|   Genome     |  ID NCBI    | Longueur |
-|------------  |------------ |----------|
-| Wuhan-Hu-1   | NC_045512.2 | 29 903 bp|
-| Omicron BA.1 | OX315743.1  | 29 767 bp|
+|   Genome     |  ID NCBI    | Longueur  |
+|--------------|-------------|-----------|
+| Wuhan-Hu-1   | NC_045512.2 | 29 903 bp |
+| Omicron BA.1 | OX315743.1  | 29 767 bp |
 
 Les séquences ont été téléchargées depuis NCBI.
 
@@ -38,10 +38,11 @@ J'ai écrit un script Python pour calculer la longueur,
 la composition en bases (A, T, G, C) et le GC% de chaque génome.
 
 ### Etape 2 : extraction du gène Spike
-J'ai d'abord extrait le Spike de Wuhan avec les coordonnées
-officielles (21562-25384). Pour Omicron, j'ai utilisé BLAST
-pour trouver les coordonnées exactes dans son génome (21534-25347),
-car les deux génomes ont des tailles différentes.
+J'ai extrait le Spike de Wuhan avec les coordonnées officielles
+(21562-25384). Pour Omicron, les coordonnées de la région Spike
+ont été déterminées à partir de l'alignement obtenu avec BLAST
+(21534-25347), afin d'extraire la région correspondante dans
+le génome étudié.
 
 ### Etape 3 : alignement
 J'ai aligné les deux séquences Spike avec MAFFT depuis
@@ -57,10 +58,10 @@ alignées position par position pour identifier les mutations.
 
 ### Statistiques des génomes
 
-|             |Wuhan-Hu-1    | Omicron BA.1 |
-| ------------|--------------|--------------|
-| Longueur    | 29 903 bp    |   29 767 bp  |
-| GC%         | 37.97%       |   37.97%     |
+|          | Wuhan-Hu-1 | Omicron BA.1 |
+|----------|------------|--------------|
+| Longueur | 29 903 bp  | 29 767 bp    |
+| GC%      | 37.97%     | 37.97%       |
 
 Omicron est plus court de 136 bp que Wuhan.
 Le GC% est identique dans les deux variants.
@@ -68,20 +69,20 @@ Le GC% est identique dans les deux variants.
 ### Mutations du gène Spike
 
 | Type          | Nombre |
-|-------------- |--------|
-| Substitutions |  31    |
-| Délétions     |  18    |
-| Insertions    |  9     |
-| Total         |  58    |
+|---------------|--------|
+| Substitutions | 31     |
+| Délétions     | 18     |
+| Insertions    | 9      |
+| Total         | 58     |
 
 ---
 
 ## 5. Graphiques
 
-- `plots/01_composition_wuhan.png`
-- `plots/02_composition_omicron.png`
-- `plots/03_taille_genomes.png`
-- `plots/04_mutations_spike.png`
+- plots/01_composition_wuhan.png
+- plots/02_composition_omicron.png
+- plots/03_taille_genomes.png
+- plots/04_mutations_spike.png
 
 ---
 
@@ -94,6 +95,8 @@ J'ai utilisé Python avec BioPython pour manipuler des séquences
 biologiques, MAFFT pour aligner deux séquences, et Matplotlib
 pour visualiser les résultats.
 
-Les résultats montrent que le variant Omicron BA.1 a 58 mutations
-dans le gène Spike par rapport à la souche Wuhan originale, ce qui
-explique pourquoi ce variant est si différent immunologiquement.
+La comparaison des séquences alignées du gène Spike a permis
+d'identifier 58 différences comptées position par position :
+31 substitutions, 18 positions de délétion et 9 positions
+d'insertion. Ces résultats illustrent les différences génétiques
+entre les deux variants étudiés.
