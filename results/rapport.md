@@ -22,7 +22,7 @@ bioinformatiques.
 
 ## 2. Données utilisées
 
-|   Genome     |                         ID NCBI                                 | Longueur  |
+|   Génome     |                         ID NCBI                                 | Longueur  |
 |--------------|-----------------------------------------------------------------|-----------|
 | Wuhan-Hu-1   | [NC_045512.2](https://www.ncbi.nlm.nih.gov/nuccore/NC_045512.2) | 29 903 bp |
 | Omicron BA.1 | [OX315743.1](https://www.ncbi.nlm.nih.gov/nuccore/OX315743.1)   | 29 767 bp |
@@ -32,22 +32,22 @@ bioinformatiques.
 
 ## 3. Méthodologie
 
-### Etape 1 : statistiques des génomes
+### Étape 1 : statistiques des génomes
 J'ai écrit un script Python pour calculer la longueur,
 la composition en bases (A, T, G, C) et le GC% de chaque génome.
 
-### Etape 2 : extraction du gène Spike
+### Étape 2 : extraction du gène Spike
 J'ai extrait le Spike de Wuhan avec les coordonnées officielles
 (21562-25384). Pour Omicron BA.1, j'ai utilisé BLAST afin de
 repérer la région correspondant au gène Spike dans le génome
 de référence étudié, puis d'en extraire la séquence pour
 l'analyse comparative (21534-25347).
 
-### Etape 3 : alignement
+### Étape 3 : alignement
 J'ai aligné les deux séquences Spike avec MAFFT depuis
 le terminal pour pouvoir les comparer correctement.
 
-### Etape 4 : analyse des mutations
+### Étape 4 : analyse des mutations
 J'ai écrit un script Python qui compare les deux séquences
 alignées position par position pour identifier les différences.
 
@@ -60,7 +60,7 @@ alignées position par position pour identifier les différences.
 |          | Wuhan-Hu-1 | Omicron BA.1 |
 |----------|------------|--------------|
 | Longueur | 29 903 bp  | 29 767 bp    |
-| GC%      | 37.97%     | 37.97%       |
+| GC%      | 37,97%     | 37,97%       |
 
 Omicron est plus court de 136 bp que Wuhan.
 Le GC% est identique dans les deux variants.
