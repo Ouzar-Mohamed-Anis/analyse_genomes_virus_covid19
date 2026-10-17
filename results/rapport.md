@@ -22,10 +22,10 @@ bioinformatiques.
 
 ## 2. Données utilisées
 
-| Genome | ID NCBI | Longueur |
-|--------|---------|----------|
-| Wuhan-Hu-1 | NC_045512.2 | 29 903 bp |
-| Omicron BA.1 | OX315743.1 | 29 767 bp |
+|   Genome     |  ID NCBI    | Longueur |
+|------------  |------------ |----------|
+| Wuhan-Hu-1   | NC_045512.2 | 29 903 bp|
+| Omicron BA.1 | OX315743.1  | 29 767 bp|
 
 Les séquences ont été téléchargées depuis NCBI.
 
@@ -57,22 +57,22 @@ alignées position par position pour identifier les mutations.
 
 ### Statistiques des génomes
 
-| | Wuhan-Hu-1 | Omicron BA.1 |
-|--|------------|--------------|
-| Longueur | 29 903 bp | 29 767 bp |
-| GC% | 37.97% | 37.97% |
+|             |Wuhan-Hu-1    | Omicron BA.1 |
+| ------------|--------------|--------------|
+| Longueur    | 29 903 bp    |   29 767 bp  |
+| GC%         | 37.97%       |   37.97%     |
 
 Omicron est plus court de 136 bp que Wuhan.
 Le GC% est identique dans les deux variants.
 
 ### Mutations du gène Spike
 
-| Type | Nombre |
-|------|--------|
-| Substitutions | 31 |
-| Délétions | 18 |
-| Insertions | 9 |
-| Total | 58 |
+| Type          | Nombre |
+|-------------- |--------|
+| Substitutions |  31    |
+| Délétions     |  18    |
+| Insertions    |  9     |
+| Total         |  58    |
 
 ---
 
