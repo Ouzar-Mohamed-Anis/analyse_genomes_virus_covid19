@@ -22,16 +22,15 @@ bioinformatiques.
 
 ## 2. Données utilisées
 
-|   Genome     |  ID NCBI    | Longueur  |
-|--------------|-------------|-----------|
-| Wuhan-Hu-1   | NC_045512.2 | 29 903 bp |
-| Omicron BA.1 | OX315743.1  | 29 767 bp |
+|   Genome     |                         ID NCBI                                 | Longueur  |
+|--------------|-----------------------------------------------------------------|-----------|
+| Wuhan-Hu-1   | [NC_045512.2](https://www.ncbi.nlm.nih.gov/nuccore/NC_045512.2) | 29 903 bp |
+| Omicron BA.1 | [OX315743.1](https://www.ncbi.nlm.nih.gov/nuccore/OX315743.1)   | 29 767 bp |
 
-Les séquences ont été téléchargées depuis NCBI.
 
 ---
 
-## 3. Ce que j'ai fait
+## 3. Méthodologie
 
 ### Etape 1 : statistiques des génomes
 J'ai écrit un script Python pour calculer la longueur,
