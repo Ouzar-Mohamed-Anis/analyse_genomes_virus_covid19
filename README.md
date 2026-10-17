@@ -40,13 +40,13 @@ python3 scripts/mutations.py
 
 ## Résultats
 
-| | Wuhan-Hu-1 | Omicron BA.1 |
-|--|------------|--------------|
-| Longueur | 29 903 bp | 29 767 bp |
-| GC% | 37.97% | 37.97% |
+|---------|Wuhan-Hu-1|--Omicron BA.1|
+|---------|----------|------------  |
+| Longueur|29 903 bp |   29 767 bp  |
+| GC%     | 37.97%   |   37.97%     |
 
 Mutations dans le gène Spike :
 - Substitutions : 31
 - Délétions : 18
 - Insertions : 9
-- Total : 58
+- Total : 58 différences comptées position par position dans l'alignement
