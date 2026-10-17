@@ -41,8 +41,8 @@ python3 scripts/mutations.py
 
 ## Résultats
 
-|---------|Wuhan-Hu-1|--Omicron BA.1|
-|---------|----------|------------  |
+|         |Wuhan-Hu-1|Omicron BA.1  |
+|---------|----------|--------------|
 | Longueur|29 903 bp |   29 767 bp  |
 | GC%     | 37.97%   |   37.97%     |
 
