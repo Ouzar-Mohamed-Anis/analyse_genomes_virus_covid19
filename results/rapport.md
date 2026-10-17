@@ -3,7 +3,7 @@
 
 Auteur : Ouzar Mohamed Anis
 Date : 5 Septembre 2026
-Outils : Python, BioPython, MAFFT, Matplotlib
+Outils : Python, BioPython, BLAST, MAFFT, Matplotlib
 
 ---
 
@@ -39,10 +39,10 @@ la composition en bases (A, T, G, C) et le GC% de chaque génome.
 
 ### Etape 2 : extraction du gène Spike
 J'ai extrait le Spike de Wuhan avec les coordonnées officielles
-(21562-25384). Pour Omicron, les coordonnées de la région Spike
-ont été déterminées à partir de l'alignement obtenu avec BLAST
-(21534-25347), afin d'extraire la région correspondante dans
-le génome étudié.
+(21562-25384). Pour Omicron BA.1, j'ai utilisé BLAST afin de
+repérer la région correspondant au gène Spike dans le génome
+de référence étudié, puis d'en extraire la séquence pour
+l'analyse comparative (21534-25347).
 
 ### Etape 3 : alignement
 J'ai aligné les deux séquences Spike avec MAFFT depuis
@@ -50,7 +50,7 @@ le terminal pour pouvoir les comparer correctement.
 
 ### Etape 4 : analyse des mutations
 J'ai écrit un script Python qui compare les deux séquences
-alignées position par position pour identifier les mutations.
+alignées position par position pour identifier les différences.
 
 ---
 
@@ -66,14 +66,19 @@ alignées position par position pour identifier les mutations.
 Omicron est plus court de 136 bp que Wuhan.
 Le GC% est identique dans les deux variants.
 
-### Mutations du gène Spike
+### Différences dans le gène Spike
 
-| Type          | Nombre |
-|---------------|--------|
-| Substitutions | 31     |
-| Délétions     | 18     |
-| Insertions    | 9      |
-| Total         | 58     |
+| Type de différence | Nombre de positions |
+|--------------------|---------------------|
+| Substitutions      | 31                  |
+| Délétions          | 18                  |
+| Insertions         | 9                   |
+| Total              | 58                  |
+
+Les différences sont comptées position par position dans
+l'alignement des deux séquences. Les nombres de délétions
+et d'insertions correspondent à des positions dans l'alignement,
+et non nécessairement à des événements mutationnels distincts.
 
 ---
 
@@ -88,15 +93,17 @@ Le GC% est identique dans les deux variants.
 
 ## 6. Conclusion
 
-Ce projet m'a permis de mettre en pratique ce que j'ai appris
-pendant mes 7 semaines de formation en bioinformatique.
+Ce projet m'a permis de mettre en pratique les connaissances
+acquises pendant mes sept semaines de formation en bioinformatique.
 
-J'ai utilisé Python avec BioPython pour manipuler des séquences
-biologiques, MAFFT pour aligner deux séquences, et Matplotlib
-pour visualiser les résultats.
+J'ai utilisé Python et Biopython pour manipuler des séquences
+biologiques, BLAST pour rechercher les coordonnées de la région
+Spike d'Omicron BA.1, MAFFT pour aligner les séquences et
+Matplotlib pour visualiser les résultats.
 
-La comparaison des séquences alignées du gène Spike a permis
-d'identifier 58 différences comptées position par position :
-31 substitutions, 18 positions de délétion et 9 positions
-d'insertion. Ces résultats illustrent les différences génétiques
-entre les deux variants étudiés.
+La comparaison des séquences alignées a permis d'identifier
+58 différences comptées position par position, réparties entre
+substitutions, délétions et insertions. Ce travail m'a permis
+de découvrir les principales étapes d'une analyse comparative
+de séquences virales et de développer mes compétences pratiques
+en bioinformatique.
