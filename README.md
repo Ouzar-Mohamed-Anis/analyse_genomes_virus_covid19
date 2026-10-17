@@ -11,8 +11,9 @@ Date : 5 Septembre 2026
 Ce projet compare les génomes de deux variants du SARS-CoV-2 :
 la souche originale Wuhan-Hu-1 et le variant Omicron BA.1.
 
-J'ai analysé la composition des génomes, extrait le gène Spike,
-aligné les deux séquences avec MAFFT et identifié les mutations.
+J'ai analysé la composition des génomes, extrait le gène Spike
+(coordonnées Omicron trouvées avec BLAST), aligné les deux séquences
+avec MAFFT et identifié les mutations.
 
 ---
 
